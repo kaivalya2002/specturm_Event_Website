@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SPECTRUM - Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="logo.png" />
+  <meta name="theme-color" content="#3a9fff">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://image.ibb.co/fOur3b/favicon.png" />
+    <meta name="theme-color" content="#1885ed">
+    <title>SPECTRUM - registration</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__logo"><img class="header__img" src="Images/logo.png" style="height: 55px;width: 40px;">
+          <h1 class="header__title"><a href="index.html" style="text-decoration: none;"> SPECTRUM<span class="header__light"> - 2K22</span></a></h1>
+        </div>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="header__menu">
+          <nav id="navbar" class="header__nav collapse">
+            <ul class="header__elenco">
+              <li class="header__el"><a href="index.html" class="header__link">Home</a></li>
+              <li class="header__el"><a href="event.html" class="header__link">Event</a></li>
+              <li class="header__el"><a href="gallery.html" class="header__link">Gallary </a></li>
+              <!-- <li class="header__el"><a href="About.html" class="header__link">About Us</a></li> -->
+              <li class="header__el"><a href="Contact.html" class="header__link">Contact us</a></li>
+              <li class="header__el header__el--blue"><a href="registration.html" class="btn btn--white">Register →</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+
+
+    <div class="sect sect--padding-bottom">
+      <div class="container">
+        <div class="row">
+          <h1 class="row__title">
+            Register Here </h1>
+          <h2 class="row__sub">Fill up the information below</h2>
+        </div>
+        <div class="row row--margin">
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <div class="contacts">
+              <!-- <a href="#" class="contacts__link"><img src="logo.png" style="height: 50px;"><h1 class="contacts_title-ag">Spectrum <span class="contacts--light"> Team</span></h1></a> -->
+              <img src="Images/registration desk.png" alt="" style="height: 300px;">
+              <p class="contacts__address">
+                SKN Sinhgad College of Engineering<br>
+                Korti, Tal: Pandharpur<br>
+                Solapur, Maharashtra <br>
+                India
+              </p>
+              <p class="contacts__info">
+                Ph <a href="#" class="contacts__info-link">+91 7517350805</a>
+              </p>
+              <p class="contacts__info">
+                <a href="#" class="contacts__info-link">contact@spectrum2k22.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form id="contact" class="form" action="connect.php" method="post">
+              <div class="form-group">
+                <div class="form-group">
+                  <div class="form__field--half">
+                    <input type="text" placeholder="First name*" class="form__field form__text" id="fname" name="fname" required></input>
+                  </div>
+                  <div class="form__field--half">
+                    <input type="text" placeholder="Last name*" class="form__field form__text" id="lname" name="lname" required></input>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="form__field--half">
+                    <input type="email" placeholder="Email address*" class="form__field form__text" id="email" name="email" required></input>
+                  </div>
+                  <div class="form__field--half">
+                    <input type="text" placeholder="Phone number*" class="form__field form__text" id="mobile" name="mobile" required></input>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <select class="form__field form__select" id="college" name="college">
+                    <option selected value>College Name*</option>
+                    <option value="SKN Sinhgad College of Engineering, Korti, Pandharpur">SKN Sinhgad College of Engineering, Korti, Pandharpur</option>
+                    <option value="SVERIs College of Engineering, Pandharpur">SVERIs College of Engineering, Pandharpur</option>
+                    <option value="Fabtech College of Engineering, Sangola">Fabtech College of Engineering, Sangola</option>
+                    <option value="Fabtech College of Engineering, Sangola">Walchand Institute of Technology , Solapur</option>
+         
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <select class="form__field form__select" id="branch" name="branch" required onchange="populate()">
+                    <option >Branch for Event*</option>
+                    <option value="CSE">Computer Science and Engineering</option>
+                    <option value="Mech">Mechanical Engineering</option>
+                    <option value="ENTC">Electronics and Telecommunication</option>
+                    <option value="Elect">Electrical Engineering</option>
+                    <option value="Civil">Civil Engineering</option>
+                    <!-- <option value="Other">Other</option> -->
+                  </select>
+                </div>
+
+                
+                <div class="form-group">
+                  <select class="form__field form__select" id="event" name="event" required onchange="populate1()">
+                    <option >Event*</option> 
+                    <!-- <option value="Coding Competition">Coding Competition</option>
+                    <option value="GUI Designing">GUI Designing</option>
+                    <option value="Quiz Competition">Quiz Competition</option>
+                    <option value="Poster Presentation">Poster Presentation</option>
+                    <option value="AutoCAD Designing">AutoCAD Designing</option>
+                    <option value="Drawing">Drawing</option>
+                    <option value="Other">Other</option> -->
+                  </select>
+                </div>
+
+                <!-- <div class="form-group">
+                  <input type="text" placeholder="College name*" class="form__field form__text"></input>
+                </div> -->
+
+                <div class="form-group">
+                  <!-- <textarea type="text" placeholder="Your messsage*" class="form__field form__textarea"></textarea> -->
+                  <button class="btn btn--up btn--width" type="submit">Submit</button>
+                </div>
+            </form>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <script>
+      function populate(s1, s2) 
+      {
+          var a = document.getElementById("branch").value;
+
+          if(a === "CSE"){
+            var arr = ["Coding Competition", "GUI Designing", "Quiz Competition", "Poster Presentation"];
+          }
+          else if (a === "Mech") {
+            var arr = ["CAD War", "Technical Quiz", "SOAP Modeling", "Poster Presentation"];
+          }
+          else if (a === "ENTC"){
+            var arr = ["Quiz Competition", "Microcontroller Programming", "Circuit Sudoku", "Poster Presentation"];
+          } 
+          else if (a === "Elect"){
+            var arr = ["Startup in electrical engineering", "Electrical Puzzle", "Circuit Master", "Poster Presentation"];
+          }
+          else if (a === "Civil"){
+            var arr = ["Technical Quiz", "Trusso", "Survey Hunt", "Poster Presentation"];
+          }
+
+          var string = "";
+
+          for (i=0 ; i<arr.length ; i++){
+            string = string + "<option value =" + arr[i] + ">" + arr[i] + "</option>";
+          }
+
+          document.getElementById("event").innerHTML = string;
+      }
+      
+  </script>
+
+
+
+
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="./script.js"></script>
+
+  </body>
+
+</html>
